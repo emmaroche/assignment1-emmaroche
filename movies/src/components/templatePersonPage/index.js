@@ -7,7 +7,6 @@ import { useQuery } from "react-query";
 import Spinner from '../spinner'
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
-import MovieHeader from "../headerMovie";
 import CastHeader from "../headerCast";
 
 const root = {

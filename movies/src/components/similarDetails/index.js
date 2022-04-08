@@ -5,9 +5,8 @@ import { getSimilarMovie } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import Typography from "@mui/material/Typography";
 import SimilarHeader from "../headerSimilar";
-
+// import Typography from "@mui/material/Typography";
 
 const SimilarDetails = ({ movie }) => {
 

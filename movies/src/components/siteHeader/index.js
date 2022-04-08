@@ -47,7 +47,7 @@ const SiteHeader = ({ history }) => {
         <Toolbar>
       
         <Link to={`/`} style={{ textDecoration: 'none' }}>
-          <HomeIcon color="secondary" />
+          <HomeIcon fontSize="large" color="secondary" />
           </Link>
 
           <div>&nbsp;</div>

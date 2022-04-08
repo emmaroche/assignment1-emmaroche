@@ -47,9 +47,6 @@ const formControl =
       genres.unshift({ id: "0", name: "All" });
     }
 
-  
-    // const trending = data.object;
-    
     const handleChange = (e, type, value) => {
       e.preventDefault();
       props.onUserInput(type, value); // NEW
@@ -63,9 +60,8 @@ const formControl =
       handleChange(e, "genre", e.target.value);
     };
 
-    const handleTopChange = (e, type, value) => {
-      e.preventDefault();
-      props.onUserInput(type, value); // NEW
+  const handleTopChange = (e, props) => {
+      handleChange(e, "vote_average", e.target.value);
     };
 
   return (
@@ -76,11 +72,13 @@ const formControl =
       }} 
       variant="outlined">
       <CardContent>
+
         <Typography variant="h5" component="h1">
           <SearchIcon fontSize="large" />
           {" "} Filter movies
         </Typography>
-        <TextField
+
+      <TextField
       sx={{...formControl}}
       id="filled-search"
       label="Search field"
@@ -109,16 +107,18 @@ const formControl =
         </FormControl>
 
 
-        <TextField
+      <TextField inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
       sx={{...formControl}}
-      id="filled-Rated"
-      label="Rated"
+      id="filled-number"
+      label="Ratings"
       type="number"
       variant="filled"
       value={props.ratingFilter}
       onChange={handleTopChange}
+      
     />
 
+    
     
 {/* 
         <FormControl sx={{...formControl}}>

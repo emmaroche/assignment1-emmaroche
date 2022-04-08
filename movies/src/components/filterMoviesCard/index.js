@@ -31,7 +31,7 @@ const formControl =
 
   
   export default function FilterMoviesCard(props) {
-    const { data, error, isLoading, isError } = useQuery("genres", getGenres, "trending", getTrendingMovie);
+    const { data, error, isLoading, isError } = useQuery("genres", getGenres, );
     
   
     if (isLoading) {
@@ -46,8 +46,9 @@ const formControl =
     if (genres[0].name !== "All"){
       genres.unshift({ id: "0", name: "All" });
     }
+
   
-    const trending = data.object;
+    // const trending = data.object;
     
     const handleChange = (e, type, value) => {
       e.preventDefault();
@@ -62,8 +63,9 @@ const formControl =
       handleChange(e, "genre", e.target.value);
     };
 
-    const handleTopChange = (e) => {
-      handleChange(e, "trending", e.target.value);
+    const handleTopChange = (e, type, value) => {
+      e.preventDefault();
+      props.onUserInput(type, value); // NEW
     };
 
   return (
@@ -106,7 +108,40 @@ const formControl =
           </Select>
         </FormControl>
 
+
+        <TextField
+      sx={{...formControl}}
+      id="filled-Rated"
+      label="Rated"
+      type="number"
+      variant="filled"
+      value={props.ratingFilter}
+      onChange={handleTopChange}
+    />
+
+    
+{/* 
         <FormControl sx={{...formControl}}>
+          <InputLabel id="top-label">Top Rated</InputLabel>
+          <Select
+    labelId="top-label"
+    id="top-select"
+    defaultValue=""
+    value={props.ratingFilter}
+    onChange={handleTopChange}
+  >
+            {genres.map((genre) => {
+              return (
+                <MenuItem key={genre.vote_average} value={genre.vote_average}>
+                  {genre.vote_average}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl> */}
+
+
+        {/* <FormControl sx={{...formControl}}>
           <InputLabel id="top-label">Trending </InputLabel>
           <Checkbox
     labelId="top-label"
@@ -123,24 +158,11 @@ const formControl =
               );
             })}
           </Checkbox>
-        </FormControl>
+        </FormControl> */}
 
         
 
-         {/* <FormControl sx={{...formControl}}>
-          <InputLabel id="toprated-label">Top Rated</InputLabel>
-          <Checkbox
-    labelId="toprated-label"
-    id="toprated-select"
-    defaultValue=""
-    value={props.topRatedFilter}
-    onChange={handleTopChange}
-  >
-
-
-           
-          </Checkbox>
-        </FormControl>  */}
+    
       </CardContent>
     
     </Card>

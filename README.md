@@ -6,34 +6,34 @@ Name: Emma Roche (20088680)
 
 [A brief statement on the content of this repository.]
 
-On my movies app assignment you can, view movie details as before but now it shows you the cast for the movie. When you clikc on a cast memeber you can now see their biography and pictures. There is a button beside the favourite button on the movie cards that when you click, shows you similar mvoies to the movie you click on. You can now also filter the movies on each page by rating.
+On my movies app assignment you can, view movie details as before but now it shows you the cast for the movie. When you click on a cast member you can now see their biography and pictures. There is a button beside the favourite button on the movie cards that when you click it shows you similar movies to the movie you click on. You can now also filter the movies on each page by rating.
 
 ### Features.
 [ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
 
 + You can now see the Cast pictures and names under the more info section of the movies.
 
-+ When you click oin a cast member it will bring you to a page where it shows more pictures of the actor/actress and their biography.
++ When you click on a cast member it will bring you to a page where it shows more pictures of the actor/actress and their biography.
 
 + There is now a 'Similar movies' clickable option where it goves pictures and names of movies that are similar to the movie clicked on.
 
 + There is a navigation option called 'Now Playing' where you can see the now playing movies.
 
-+ There is a rating filter where it will only show the movies on that page with the ratings with or higher than the number you enter
++ There is a rating filter where it will only show the movies on that page with the ratings with or higher than the number you enter.
 
-+ Instead of click a 'more info' button, I have made it so you can just click on the movie image and it will bring you to the movie details
++ Instead of click a 'more info' button, I have made it so you can just click on the movie image and it will bring you to the movie details.
 
-+ I have added a scrollable grid to the pictures on the left of the screen on the movies details page via the templateMoviePage
++ I have added a scrollable grid to the pictures on the left of the screen on the movies details page via the templateMoviePage.
 
-+ I have added a new movie icon to the filter card
++ I have added a new movie icon to the filter card.
 
-+ I have changed the header, similar movies button and filter card colour to primary blue
++ I have changed the header, similar movies button and filter card colour to primary blue.
 
-+ I changed the layout of the movie relase date and movie rating on the movie cards
++ I changed the layout of the movie relase date and movie rating on the movie cards.
 
-+ I added a home button icon beside the tmdb title where you can click to retutn to the home page no matter what page you are, this is to prevent having to always click through mulitple back arrows to get back to the home page
++ I added a home button icon beside the tmdb title where you can click to retutn to the home page no matter what page you are, this is to prevent having to always click through mulitple back arrows to get back to the home page.
 
-+ I added ImageLists and Grids to the sections that didnt have responsiveness previosuly and to the sections I newly added to make the app responsive
++ I added ImageLists and Grids to the sections that didnt have responsiveness previosuly and to the sections I newly added to make the app responsive.
 
 ## Setup requirements.
 
@@ -65,11 +65,11 @@ endpoint: `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.en
 
 [ List the __new routes__ supported by your app and state the associated page.]
 
-+ /similar/:id - similarMoviesPage.js - Displays similar movies to the movie you click on
++ /similar/:id - similarMoviesPage.js - Displays similar movies to the movie that you click on
 
-+ /movie/now_playing - NowPlayingMoviesPage.js - Displays Now PLaying movies
++ /movie/now_playing - NowPlayingMoviesPage.js - Displays Now Playing movies
 
-+ /person/:id - moviePersonPage.js - Displays biography and pictures of cast memebers you click on
++ /person/:id - moviePersonPage.js - Displays biography and pictures of the cast member you click on
 
 
 ## Independent learning (If relevant).

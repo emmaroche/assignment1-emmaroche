@@ -17,8 +17,8 @@ Name: Emma Roche (20088680)
 
 + There is a navigation option called 'Now Playing' where you can see the now playing movies.
 
-+ etc
-+ etc
++ There is a rating filter where it will only show the movies on that page with the ratings with or higher than the number you enter
+
 
 ## Setup requirements.
 

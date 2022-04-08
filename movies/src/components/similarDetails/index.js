@@ -6,6 +6,8 @@ import { useQuery } from "react-query";
 import Spinner from '../spinner'
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import Typography from "@mui/material/Typography";
+import SimilarHeader from "../headerSimilar";
+
 
 const SimilarDetails = ({ movie }) => {
 
@@ -27,9 +29,10 @@ const SimilarDetails = ({ movie }) => {
     <>
   <div>&nbsp;</div>
 
-<Typography variant="h3" component="h3">
+  <SimilarHeader movie={movie} />
+{/* <Typography variant="h3" component="h3">
         Similar movies
-      </Typography>
+      </Typography> */}
 
       <div>&nbsp;</div>
             <ImageList sx={{ width: 'auto', height: 'auto' }} cols={5}> 

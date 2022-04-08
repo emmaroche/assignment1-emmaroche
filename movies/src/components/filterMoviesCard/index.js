@@ -1,7 +1,6 @@
 
 import React from "react";
 import { getGenres } from "../../api/tmdb-api";
-import { getTrendingMovie } from "../../api/tmdb-api"; 
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -12,15 +11,10 @@ import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg'
+import img from '../../images/cam.png'
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import TopRatedMoviePage from "../topRated";
+
 
 const formControl = 
   {
@@ -107,63 +101,32 @@ const formControl =
         </FormControl>
 
 
-      <TextField inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+      <TextField 
       sx={{...formControl}}
       id="filled-number"
       label="Ratings"
       type="number"
+      inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
       variant="filled"
       value={props.ratingFilter}
       onChange={handleTopChange}
       
     />
-
-    
-    
-{/* 
-        <FormControl sx={{...formControl}}>
-          <InputLabel id="top-label">Top Rated</InputLabel>
-          <Select
-    labelId="top-label"
-    id="top-select"
-    defaultValue=""
-    value={props.ratingFilter}
-    onChange={handleTopChange}
-  >
-            {genres.map((genre) => {
-              return (
-                <MenuItem key={genre.vote_average} value={genre.vote_average}>
-                  {genre.vote_average}
-                </MenuItem>
-              );
-            })}
-          </Select>
-        </FormControl> */}
+     <div>&nbsp;</div>
 
 
-        {/* <FormControl sx={{...formControl}}>
-          <InputLabel id="top-label">Trending </InputLabel>
-          <Checkbox
-    labelId="top-label"
-    id="top-select"
-    defaultValue=""
-    value={props.topRatedFilter}
-    onChange={handleTopChange}
-  >
-            {trending?.map((objects) => {
-              return (
-                <TopRatedMoviePage key={objects.id} value={objects.id}>
-                 
-                </TopRatedMoviePage>
-              );
-            })}
-          </Checkbox>
-        </FormControl> */}
-
+     <CardMedia
+        sx={{ height: 250 }}
+        image={img}
+        title="Filter"
         
+      />
 
-    
       </CardContent>
+
+           
+
+     <div>&nbsp;</div>
     
     </Card>
   );

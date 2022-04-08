@@ -27,8 +27,14 @@ function MovieListPageTemplate({ movies, title, action, genres }) {
     if (type === "name") setNameFilter(value);
     else setRatingFilter(value);
    
-   
   };
+
+  // const handleGenreChange = (type, value) => {
+  //   if (type === "name") setNameFilter(value);
+  //   else setGenreFilter(value);
+   
+  // };
+
 
   return (
     <Grid container sx={{ padding: '20px' }} >

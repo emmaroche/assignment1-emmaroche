@@ -8,6 +8,7 @@ import Spinner from '../spinner'
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import MovieHeader from "../headerMovie";
+import CastHeader from "../headerCast";
 
 const root = {
   display: "flex",
@@ -36,7 +37,9 @@ console.log(person.id)
 
   return (
     <>
-   
+
+<div>&nbsp;</div>
+    <CastHeader images={images} />
 
       <Grid container spacing={5} sx={{ padding: "15px" }}>
         <Grid item xs={12}>

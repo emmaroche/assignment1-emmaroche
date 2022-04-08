@@ -15,6 +15,7 @@ import Spinner from '../spinner';
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import Grid from "@mui/material/Grid";
 
 
 import { Link } from "react-router-dom";
@@ -48,7 +49,10 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
 
   return (
     <>
-   
+    <Grid container sx={{ padding: '20px' }} >
+     
+      <Grid item container spacing={5}>
+        <Grid key="find" item xs={12}  >
       <Typography variant="h5" component="h3">
         Overview
       </Typography>
@@ -117,8 +121,8 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
                         alt={cast.character}
                     />
                     <ImageListItemBar
-            title={cast.character}
-            subtitle={<span>Played by {cast.name}</span>}/>
+            title={cast.name}
+            subtitle={<span>As {cast.character}</span>}/>
                     </ImageListItem>
                     </Link>))}
             </ImageList>
@@ -142,6 +146,9 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <MovieReviews movie={movie} />
       </Drawer>
+      </Grid>
+      </Grid>
+      </Grid>
       </>  
   );
 };

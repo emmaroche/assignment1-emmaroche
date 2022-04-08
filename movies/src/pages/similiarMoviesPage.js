@@ -5,6 +5,7 @@ import { getMovie } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 
+
 const SimilarPage = (props) => {
   const { id } = useParams();
 
@@ -23,9 +24,11 @@ const SimilarPage = (props) => {
 
   return (
     <>
-    
+  
+
             <SimilarDetails movie={movie} />
          
+     
     </>
   );
 };

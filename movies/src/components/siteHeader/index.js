@@ -11,9 +11,6 @@ import { useNavigate } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Link } from "react-router-dom";
-import HomeIcon from "@mui/icons-material/Home";
-
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
@@ -48,17 +45,14 @@ const SiteHeader = ({ history }) => {
       <AppBar position="fixed" color="primary">
         <Toolbar>
       
-        
-
           <div>&nbsp;</div>
+
           <Typography variant="h4" sx={{ flexGrow: 1 }}>
           
             TMDB Client 
            
           </Typography>
 
-          
-          
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             All you ever wanted to know about Movies!
           </Typography>

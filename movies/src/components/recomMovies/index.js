@@ -5,11 +5,7 @@ import { getRecomMovie } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import SimilarHeader from "../headerSimilar";
-import Grid from "@mui/material/Grid";
 import { Paper } from "@mui/material";
-import Typography from "@mui/material/Typography";
-
 
 const RecomDetails = ({ movie }) => {
 
@@ -29,7 +25,6 @@ const RecomDetails = ({ movie }) => {
 
   return (
     <>
-
          <Paper>
             <ImageList sx={{ height: 680 }} cols={5}> 
                 

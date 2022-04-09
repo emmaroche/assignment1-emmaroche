@@ -43,7 +43,6 @@ export default function MovieCard({ movie, action }) {
             </Avatar>
           ) : null
         }
-       
 
         title={
           <Typography variant="h5" component="p">
@@ -51,7 +50,6 @@ export default function MovieCard({ movie, action }) {
           </Typography>
         }
       />
-
 
 <Link to={`/movies/${movie.id}`} style={{ textDecoration: 'none' }}>
       <CardMedia
@@ -64,7 +62,6 @@ export default function MovieCard({ movie, action }) {
       />
        </Link>
 
-       
       <CardContent>
       
           <Grid item xs={12}>
@@ -80,9 +77,9 @@ export default function MovieCard({ movie, action }) {
               {"  "} {movie.vote_average}
             </Typography>
           </Grid>
-        
          
       </CardContent>
+
       <CardActions disableSpacing>
         {action(movie)}
          <Link to={`/similar/${movie.id}`} style={{ textDecoration: 'none' }}>
@@ -90,7 +87,6 @@ export default function MovieCard({ movie, action }) {
            Similar Movies
           </Button>
         </Link>
-        
       </CardActions>
      
     </Card>

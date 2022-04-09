@@ -36,7 +36,6 @@ function MovieListPageTemplate({ movies, title, action, genres }) {
    
   };
 
-
   return (
     <Grid container sx={{ padding: '20px' }} >
       <Grid item xs={12}>
@@ -45,19 +44,19 @@ function MovieListPageTemplate({ movies, title, action, genres }) {
       <Grid item container spacing={5}>
         <Grid key="find" item xs={12} sm={6} md={6} lg={4} xl={3} >
           <FilterCard
-             onUserInput={handleGenreChange}
+            onUserInput={handleGenreChange}
             titleFilter={nameFilter}
             genreFilter={genreFilter}     
             ratingFilter={ratingFilter} 
           />
+
 <div>&nbsp;</div>
-<FilterRatingCard
-           
+
+          <FilterRatingCard
             onUserInput={handleChange}
             titleFilter={nameFilter}
             genreFilter={genreFilter}     
             ratingFilter={ratingFilter} 
-           
           />
 
         </Grid>

@@ -4,37 +4,37 @@ Name: Emma Roche (20088680)
 
 ## Overview.
 
-On my movies app assignment you can view movie details as before by clicking on a movie card, but now it includes the cast for the movie. When you click on a cast member you can see their biography and pictures. There is a button beside the favourite button on the movie cards that when you click it shows you similar movies to the movie card you clicked on. You can now also filter the movies on each page by rating by using the ratings filter movie card. There are now two new menu optons called 'Now Playing' and 'Top rated' where you can see now playing and top rated movie lists.
+ My movies app includes 5 views on the site header menu bar which display different movie lists such as Home, Now Playing, Upcoming, Top Rated and Favourites. When you click on an individual movie card, it displays basic overview information on the selected movie, as well as cast details and recommended movies. There are two buttons on the bottom of the movie cards, one is a favourites button that when you click on it, it adds that selected movie to the favourites movie list view. The other button is labeled 'Similar Movies', where you can click on that to view the similar movies to the selected movie. You can also filter the movie lists by search, genres and ratings.
 
 ### Features.
 
-+ There is a new view added to the menu option on the site header called 'Now Playing' where you can see a list of now playing movies.
++ There is a new view added to the site header menu bar called 'Now Playing' where you can see a list of now playing movies.
 
-+ There is a new view added to the menu option on the site header called 'Top rated' where you can see a list of top rated movies.
++ There is a new view added to the site header menu bar called 'Top rated' where you can see a list of top rated movies.
 
-+ There is a 'Similar movies' clickable button under the movie cards, where it bringd you to a page that displays pictures and names of movies that are similar to the movie clicked on.
++ There is a new 'Similar movies' clickable button at the bottom of the movie cards, where it brings you to a page that displays pictures and names of movies that are similar to the selected movie.
 
-+ There is a new rating filter card added under the original filter card where it will only show the movies on that page with the ratings matching or higher than the number you enter.
++ There is a new rating filter card, added under the original filter card, where it will only show the movies on that page with the ratings matching or higher than the number you enter.
 
 + Instead of click a 'more info' button on the movies card, I have made it so you can just click on the movie image and it will bring you to the movie details page.
 
-+ You can now see the Cast pictures, their names and the characters they played in the movie, under the more details section of the movies.
++ You can now see the Cast pictures, their names and the characters they played in the movie on the movies more details page.
 
 + When you click on a cast member it will bring you to a page where it shows their biography and a scrollable section with more pictures of the actor/actress.
 
 + I have added a scrollable imageList to the movie posters on the left of the screen on the movies details page.
 
-+ I have changed the header, similar movies button and filter card background colour to primary blue.
++ I have made some basic UI changes to the site header, similar movies button and filter card background by changing their colour to primary blue.
 
 + I changed the presentation of the movie release date and movie rating on the movie cards.
 
-+ I added responsive UI components such as ImageLists and Grids to the sections that didn't have these responsive features previosuly and to the sections I newly added to make the app responsive.
++ To make the app responsive, I added Responsive UI components, such as ImageLists and Grids, to the sections that didn't have these responsive features previously and to the sections that I newly added.
 
-+ I made the movie cards wider so now only 3/4 movie cards are shown in a row instead of 5.
++ I made the movie cards wider so now 3/4 movie cards are shown in a row instead of 5 to make it easier to read the mvoue names and see the movie pictures.
 
 ## Setup requirements.
 
-I made a new git repository on github.com and then followed the relevant steps via the terminal to install what was nescessary, create the files and folders needed to add into my assignment folder to push to the git repo. Then I zipped my movies folder from the in class labs to my newly created assignemnt folder. I then unzipped it once in the folder. Once that was added I pushed the assignment folder to git and my movie labs were now there as a base to start working on the assignment. I then opened my movies folder, within the assignemnt folder, in Visual Studio Code and used npm start to get it up and runnning via http://localhost:3000/ on my google chrome.
+N/A
 
 ## API endpoints.
 
@@ -67,8 +67,8 @@ URL: `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REA
 
 + /similar/:id - similarMoviesPage.js - Displays view of similar movies to the movie that you click on.
 
-+ /person/:id - moviePersonPage.js - Displays view of biography and pictures of the cast member you click on in the movie details page.
++ /person/:id - moviePersonPage.js - Displays view of people details for the cast member you click on in the movie details page.
 
 ## Independent learning (If relevant).
 
-I researched more into the use of imageList API via [MUI](https://mui.com). While researching how to use imageList for my cast section I found another component API called <ImageListItemBar> which helped me add a caption under the Imagelists to display the casts name and roles and to display the similar movie names.
+I researched more into the use of the imageList API via [MUI](https://mui.com). While researching how to use imageList, I found another component API called <ImageListItemBar> which allowed me to add a caption under the Imagelists which I used to display the casts names & roles and to display the movie recommendation & similar movie names.

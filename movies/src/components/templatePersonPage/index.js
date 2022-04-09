@@ -57,8 +57,7 @@ console.log(person.id)
         component="ul" 
         sx={{...root}}
       >
-      
-
+    
       <Typography variant="h4" component="h4">
         Biography
       </Typography>
@@ -84,17 +83,17 @@ console.log(person.id)
                     </ImageListItem>
                 ))}
             </ImageList>
+
             </Grid>
+
           </Paper>
 
           </div>
          
         </Grid>
-
       
       </Grid>
 
-     
     </>
   );
 };

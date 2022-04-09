@@ -8,7 +8,6 @@ import Spinner from '../components/spinner'
 
 const PersonPage = (props) => {
 
-
   const { id } = useParams();
 
   const { data: person, error, isLoading, isError } = useQuery(

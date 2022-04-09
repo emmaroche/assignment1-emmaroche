@@ -8,7 +8,6 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import SimilarHeader from "../headerSimilar";
 import Grid from "@mui/material/Grid";
 import { Paper } from "@mui/material";
-// import Typography from "@mui/material/Typography";
 
 const SimilarDetails = ({ movie }) => {
 
@@ -28,12 +27,10 @@ const SimilarDetails = ({ movie }) => {
 
   return (
     <>
+
   <div>&nbsp;</div>
 
   <SimilarHeader movie={movie} />
-{/* <Typography variant="h3" component="h3">
-        Similar movies
-      </Typography> */}
 
       <div>&nbsp;</div>
       <Grid container sx={{ padding: '20px' }} >

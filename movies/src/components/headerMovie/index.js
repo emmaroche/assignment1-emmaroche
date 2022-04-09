@@ -22,6 +22,7 @@ const MovieHeader = (props) => {
             margin: 0,
         }}
       >
+
       <IconButton aria-label="go back" onClick={() => navigate(-1)} >
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
@@ -38,6 +39,7 @@ const MovieHeader = (props) => {
       <IconButton aria-label="go forward" onClick={() => navigate(+1) } >
         <ArrowForwardIcon color="primary" fontSize="large" />
       </IconButton>
+      
     </Paper>
   );
 };

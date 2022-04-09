@@ -1,7 +1,6 @@
 import React from "react";
 import { getGenres } from "../../api/tmdb-api";
 import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
@@ -10,10 +9,10 @@ import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import img from '../../images/cam.png'
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
-
+// import img from '../../images/cam.png'
+// import CardMedia from "@mui/material/CardMedia";
 
 const formControl = 
   {
@@ -22,11 +21,9 @@ const formControl =
     backgroundColor: "rgb(255, 255, 255)"
   };
 
-  
   export default function FilterMoviesCard(props) {
     const { data, error, isLoading, isError } = useQuery("genres", getGenres, );
 
-  
     if (isLoading) {
       return <Spinner />;
     }
@@ -57,11 +54,7 @@ const formControl =
       handleChange(e, "vote_average", e.target.value);
     };
 
-
-
   return (
-
-
 
     <Card 
       sx={{
@@ -69,6 +62,7 @@ const formControl =
         backgroundColor: "#1e88e5"
       }} 
       variant="outlined">
+
       <CardContent>
 
         <Typography variant="h5" component="h1">
@@ -85,6 +79,7 @@ const formControl =
       value={props.titleFilter}
       onChange={handleTextChange}
     />
+
         <FormControl sx={{...formControl}}>
           <InputLabel id="genre-label">Genre</InputLabel>
           <Select
@@ -93,7 +88,6 @@ const formControl =
     defaultValue=""
     value={props.genreFilter}
     onChange={handleGenreChange}
-   
   >
             {genres.map((genre) => {
               return (
@@ -105,20 +99,7 @@ const formControl =
           </Select>
         </FormControl>
 
-        
-      {/* <TextField 
-      sx={{...formControl}}
-      id="filled-number"
-      label="Ratings"
-      type="number"
-      inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-      variant="filled"
-      value={props.ratingFilter}
-      onChange={handleTopChange}
-      
-    /> */}
      <div>&nbsp;</div>
-
 
      {/* <CardMedia
         sx fluid={{ fluidheight: 200 }}
@@ -129,10 +110,6 @@ const formControl =
 
       </CardContent>
 
-           
-
-  
-    
     </Card>
   );
 }

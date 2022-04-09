@@ -15,9 +15,9 @@ import Spinner from '../spinner';
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 import RecomDetails from "../recomMovies";
+// import Grid from "@mui/material/Grid";
 
 const root = {
   display: "flex",
@@ -56,7 +56,6 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
         Overview
       </Typography>
    
-
       <Typography variant="h6" component="p">
         {movie.overview}    
       </Typography>
@@ -113,8 +112,6 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
         Cast
       </Typography>
      
-     
-  
 <ImageList sx={{ height: 680 }} cols={5} >
                 
                 {credits.map((cast) => (
@@ -132,9 +129,9 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
                     </ImageListItem>
                     </Link>))}
             </ImageList>
-            
-           
+               
 </Paper>
+
 <div>&nbsp;</div>
 
 <Paper 
@@ -143,9 +140,11 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
       >
 <Typography variant="h5" component="h3">
         If you like {movie.title}, you might like:
-      </Typography>
+        
+</Typography>
 
 <RecomDetails movie={movie} />
+
 </Paper>
       <Fab
         color="secondary"

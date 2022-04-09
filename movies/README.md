@@ -38,42 +38,37 @@ I made a new git repository on github.com and then followed the relevant steps v
 
 ## API endpoints.
 
-+ Discover list of now playing movies - path: movie/now_playing 
-endpoint: `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
++ Now Playing movies - path: movie/now_playing 
+URL: `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
 
-+ Discover list of top rated movies - path: /movie/top_rated
-endpoint: `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
++ Top Rated movies - path: /movie/top_rated
+URL: `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
 
-+ See the cast members in the movie details of the movie you click on - path: /movie/{movie_id}/credits 
-endpoint: `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
++ Movie credits - path: /movie/{movie_id}/credits 
+URL: `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
 
-+ See the biography of the actor/actress you click on in the cast section  - paths: /person/{person_id} 
-endpoint: `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
++ People details  - path: /person/:id
+URL: `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
 
-+ See the pictures of the actor/actress you click on in the cast secrion  - path: /person/{person_id}/images 
-endpoint: `https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
++ People images - path: /person/{person_id}/images 
+URL: `https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
 
-+ See the recommended movies in the movie details of the movie you click on  - path: /movie/{movie_id}/recommendations 
-endpoint:  `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${process.env.REACT_APP_TMDB_KEY}`
++ Movie Recommendations  - path: /movie/{movie_id}/recommendations 
+URL:  `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${process.env.REACT_APP_TMDB_KEY}`
 
-+ See the similar movies for the movie you click on - path: /similar/:id
-endpoint: `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}`
++ Similar movies - path: /similar/:id
+URL: `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}`
 
 ## Routing.
 
-+ /movie/now_playing - NowPlayingMoviesPage.js - Displays the movies that are now playing
++ /movie/now_playing - NowPlayingMoviesPage.js - Displays view of the movies that are now playing.
 
-+ /movie/top_rated - TopRatedMoviesPage.js - Displays the top rated movies
++ /movie/top_rated - TopRatedMoviesPage.js - Displays view of the top rated movies.
 
-+ /similar/:id - similarMoviesPage.js - Displays similar movies to the movie that you click on
++ /similar/:id - similarMoviesPage.js - Displays view of similar movies to the movie that you click on.
 
-+ /person/:id - moviePersonPage.js - Displays biography and pictures of the cast member you click on
++ /person/:id - moviePersonPage.js - Displays view of biography and pictures of the cast member you click on in the movie details page.
 
 ## Independent learning (If relevant).
 
-Although already present in some aspects of the lab, to further my understanding and add new features within these components, I researched more into imageList API via MUI.com. While researching how to use imageList for my cast section I found another component API called <ImageListItemBar> which helped me add a caption under the Imagelists to display the casts name and roles and to display the similar movie names.
-
-
-Itemize the technologies/techniques you researched independently and adopted in your project, 
-i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these 
-(we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs)
+I researched more into the use of imageList API via [MUI](https://mui.com). While researching how to use imageList for my cast section I found another component API called <ImageListItemBar> which helped me add a caption under the Imagelists to display the casts name and roles and to display the similar movie names.

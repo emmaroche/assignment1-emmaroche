@@ -32,6 +32,8 @@ Name: Emma Roche (20088680)
 
 + I made the movie cards wider so now 3/4 movie cards are shown in a row instead of 5 to make it easier to read the mvoue names and see the movie pictures.
 
++ I added a 3 page pagination to the movie list, each page shows max 7 movie cards.
+
 ## Setup requirements.
 
 N/A
@@ -69,6 +71,16 @@ URL: `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REA
 
 + /person/:id - moviePersonPage.js - Displays view of people details for the cast member you click on in the movie details page.
 
-## Independent learning (If relevant).
+## Independent learning 
 
-I researched more into the use of the imageList API via [MUI](https://mui.com). While researching how to use imageList, I found another component API called <ImageListItemBar> which allowed me to add a caption under the Imagelists which I used to display the casts names & roles and to display the movie recommendation & similar movie names.
+### New Material UI components
+
+I researched a bit more into the use of the imageList API via [MUI](https://mui.com). While researching how to use imageList, I found another component API called <ImageListItemBar> which allowed me to add a caption under the Imagelists which I used to display the casts names & roles and to display the movie recommendation & similar movie names.
+
+### Pagination
+
+I wanted to add pagination to my app, this part took me a lot of trial and error to figure out but by searching around I found a few websites and youtube videos that I followed instructions from and put them together to create successful pagination that you can seen all the movie list views. The most significant website and video that helped me are linked below.
+
++I installed 'npm i react-paginate' which is a ReactJS component, I got this command from this website: (https://www.npmjs.com/package/react-paginate) 
+
++I was advised to install the above ReactJS component from this youtube video: (https://youtu.be/HANSMtDy508) I followed most of this youtube tutorial and made the relevant changes to get it to work within in this app. 

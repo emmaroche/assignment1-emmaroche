@@ -35,11 +35,11 @@ const SimilarDetails = ({ movie }) => {
         Similar movies
       </Typography> */}
 
-      
+      <div>&nbsp;</div>
       <Grid container sx={{ padding: '20px' }} >
      
      <Grid item container spacing={5}>
-       <Grid key="find" item xs={12}  >
+       <Grid key="find" item xs={12} md={12} >
          <Paper>
             <ImageList sx={{ width: 'auto', height: 'auto' }} cols={5}> 
                 
@@ -58,7 +58,7 @@ const SimilarDetails = ({ movie }) => {
 
                 ))}
             </ImageList>
-            </Paper> </Grid> </Grid> </Grid>
+           </Paper> </Grid> </Grid> </Grid>
     </>
   );
 };

@@ -20,12 +20,11 @@ import { Link } from "react-router-dom";
 import RecomDetails from "../recomMovies";
 
 const root = {
-    display: "flex",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    listStyle: "none",
-    padding: 1.5,
-    margin: 0,
+  display: "flex",
+  flexWrap: "wrap",
+  listStyle: "none",
+  padding: 1.5,
+  margin: 0,
 };
 const chip = { margin: 0.5 };
 
@@ -49,10 +48,10 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
 
   return (
     <>
-    <Grid container sx={{ padding: '20px' }} >
-     
-      <Grid item container spacing={5}>
-        <Grid key="find" item xs={12}  >
+  <Paper 
+        component="ul" 
+        sx={{...root}}
+      >
       <Typography variant="h5" component="h3">
         Overview
       </Typography>
@@ -61,6 +60,7 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
       <Typography variant="h6" component="p">
         {movie.overview}    
       </Typography>
+      </Paper>
       <div>&nbsp;</div>
       <Paper 
         component="ul" 
@@ -105,11 +105,15 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
       <div>&nbsp;</div>
       <div>&nbsp;</div>
 
+      <Paper 
+        component="ul" 
+        sx={{...root}}
+      >
       <Typography variant="h5" component="h3">
         Cast
       </Typography>
      
-<Paper>
+     
   
 <ImageList sx={{ height: 680 }} cols={5} >
                 
@@ -132,12 +136,17 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
            
 </Paper>
 <div>&nbsp;</div>
+
+<Paper 
+        component="ul" 
+        sx={{...root}}
+      >
 <Typography variant="h5" component="h3">
         If you like {movie.title}, you might like:
       </Typography>
 
 <RecomDetails movie={movie} />
-
+</Paper>
       <Fab
         color="secondary"
         variant="extended"
@@ -154,9 +163,7 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <MovieReviews movie={movie} />
       </Drawer>
-      </Grid>
-      </Grid>
-      </Grid>
+    
       </>  
   );
 };

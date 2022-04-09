@@ -73,7 +73,7 @@ console.log(person.id)
       
       <Grid item xs={8}>
       <div>&nbsp;</div>
-      <ImageList sx={{  height: '450' }} cols={3} >
+      <ImageList sx={{  height: 450 }} cols={3} >
              
                 {images.map((image) => (
                     <ImageListItem key={image.file_path} cols={1}>

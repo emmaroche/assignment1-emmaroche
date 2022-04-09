@@ -59,8 +59,6 @@ endpoint:  `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${p
 + See the similar movies for the movie you click on - path: /similar/:id
 endpoint: `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}`
 
-
-
 ## Routing.
 
 + /movie/now_playing - NowPlayingMoviesPage.js - Displays the movies that are now playing

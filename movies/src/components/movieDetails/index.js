@@ -16,9 +16,9 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import Grid from "@mui/material/Grid";
-
-
 import { Link } from "react-router-dom";
+import RecomDetails from "../recomMovies";
+
 const root = {
     display: "flex",
     justifyContent: "center",
@@ -56,11 +56,12 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
       <Typography variant="h5" component="h3">
         Overview
       </Typography>
+   
 
       <Typography variant="h6" component="p">
         {movie.overview}    
       </Typography>
-
+      <div>&nbsp;</div>
       <Paper 
         component="ul" 
         sx={{...root}}
@@ -101,7 +102,7 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
   
       </Paper>
 
- 
+      <div>&nbsp;</div>
       <div>&nbsp;</div>
 
       <Typography variant="h5" component="h3">
@@ -110,7 +111,7 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
      
 <Paper>
   
-<ImageList sx={{ width: 'auto', height: 'auto' }} cols={5} >
+<ImageList sx={{ height: 680 }} cols={5} >
                 
                 {credits.map((cast) => (
                   <Link to={`/person/${cast.id}`}>
@@ -119,6 +120,7 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
                         src={`https://image.tmdb.org/t/p/w500/${cast.profile_path}`}
                       
                         alt={cast.character}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                     <ImageListItemBar
             title={cast.name}
@@ -129,6 +131,12 @@ const MovieDetails = ({ movie, children }) => {  // Don't miss this!
             
            
 </Paper>
+<div>&nbsp;</div>
+<Typography variant="h5" component="h3">
+        If you like {movie.title}, you might like:
+      </Typography>
+
+<RecomDetails movie={movie} />
 
       <Fab
         color="secondary"

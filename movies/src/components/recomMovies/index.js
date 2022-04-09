@@ -1,20 +1,21 @@
 import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { getSimilarMovie } from "../../api/tmdb-api";
+import { getRecomMovie } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import SimilarHeader from "../headerSimilar";
 import Grid from "@mui/material/Grid";
 import { Paper } from "@mui/material";
-// import Typography from "@mui/material/Typography";
+import Typography from "@mui/material/Typography";
 
-const SimilarDetails = ({ movie }) => {
+
+const RecomDetails = ({ movie }) => {
 
   const { data , error, isLoading, isError } = useQuery(
-    ["similar", { id: movie.id }],
-    getSimilarMovie
+    ["recommendations", { id: movie.id }],
+    getRecomMovie
   );
 
   if (isLoading) {
@@ -24,26 +25,15 @@ const SimilarDetails = ({ movie }) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
-  const similar = data.results
+  const recommendations = data.results
 
   return (
     <>
-  <div>&nbsp;</div>
 
-  <SimilarHeader movie={movie} />
-{/* <Typography variant="h3" component="h3">
-        Similar movies
-      </Typography> */}
-
-      
-      <Grid container sx={{ padding: '20px' }} >
-     
-     <Grid item container spacing={5}>
-       <Grid key="find" item xs={12}  >
          <Paper>
-            <ImageList sx={{ width: 'auto', height: 'auto' }} cols={5}> 
+            <ImageList sx={{ height: 680 }} cols={5}> 
                 
-                {similar.map((results) => (
+                {recommendations.map((results) => (
                     <ImageListItem key={results.poster_path
                     } cols={1}>
                     <img
@@ -58,9 +48,9 @@ const SimilarDetails = ({ movie }) => {
 
                 ))}
             </ImageList>
-            </Paper> </Grid> </Grid> </Grid>
+            </Paper> 
     </>
   );
 };
 
-export default SimilarDetails;
+export default RecomDetails;

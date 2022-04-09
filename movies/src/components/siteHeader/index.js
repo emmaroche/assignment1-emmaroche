@@ -48,9 +48,7 @@ const SiteHeader = ({ history }) => {
       <AppBar position="fixed" color="primary">
         <Toolbar>
       
-        <Link to={`/`} style={{ textDecoration: 'none' }}>
-          <HomeIcon fontSize="large" color="secondary" />
-          </Link>
+        
 
           <div>&nbsp;</div>
           <Typography variant="h4" sx={{ flexGrow: 1 }}>

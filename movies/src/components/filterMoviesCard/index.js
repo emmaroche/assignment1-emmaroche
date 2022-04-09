@@ -120,12 +120,12 @@ const formControl =
      <div>&nbsp;</div>
 
 
-     <CardMedia
-        sx={{ height: 200 }}
+     {/* <CardMedia
+        sx fluid={{ fluidheight: 200 }}
         image={img}
         title="Filter"
         
-      />
+      /> */}
 
       </CardContent>
 

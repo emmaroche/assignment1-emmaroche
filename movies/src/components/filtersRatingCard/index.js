@@ -23,7 +23,7 @@ const formControl =
   };
 
   
-  export default function FilterMovieCard2(props) {
+  export default function FilterRatingCard(props) {
     const { data, error, isLoading, isError } = useQuery("genres", getGenres, );
 
   
@@ -90,12 +90,12 @@ const formControl =
     />
       
       <div>&nbsp;</div>
-        <CardMedia
+        {/* <CardMedia
         sx={{ height: 150 }}
         image={img}
         title="Filter"
         
-      />
+      /> */}
 
       </CardContent>
 

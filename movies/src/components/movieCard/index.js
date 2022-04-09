@@ -15,19 +15,21 @@ import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'
 import { MoviesContext } from "../../contexts/moviesContext";
 
+
 export default function MovieCard({ movie, action }) {
   const { favorites, addToFavorites } = useContext(MoviesContext);
-
+  
   if (favorites.find((id) => id === movie.id)) {
     movie.favorite = true;
   } else {
     movie.favorite = false
   }
-
+  
   const handleAddToFavorite = (e) => {
     e.preventDefault();
     addToFavorites(movie);
   };
+
 
   return (
    
@@ -41,7 +43,8 @@ export default function MovieCard({ movie, action }) {
             </Avatar>
           ) : null
         }
-        
+       
+
         title={
           <Typography variant="h5" component="p">
             {movie.title}{" "}
@@ -66,23 +69,24 @@ export default function MovieCard({ movie, action }) {
       
           <Grid item xs={12}>
             <Typography variant="h5" gutterBottom component="div">
-              <CalendarIcon fontSize="small" />
-              {movie.release_date}
+              <CalendarIcon fontSize="small" />    
+              {"  "} {movie.release_date}
             </Typography>
           </Grid>
 
           <Grid item xs={6}>
             <Typography variant="h5" gutterBottom component="div">
               <StarRateIcon fontSize="small" />
-              {"  "} {movie.vote_average}{" "}
+              {"  "} {movie.vote_average}
             </Typography>
           </Grid>
         
+         
       </CardContent>
       <CardActions disableSpacing>
         {action(movie)}
          <Link to={`/similar/${movie.id}`} style={{ textDecoration: 'none' }}>
-          <Button variant="contained" size="small" color="primary">
+          <Button variant="contained" size="large" color="primary">
            Similar Movies
           </Button>
         </Link>

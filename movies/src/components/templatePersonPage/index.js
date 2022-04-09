@@ -64,13 +64,16 @@ console.log(person.id)
       </Typography>
       <div>&nbsp;</div>
       <div>&nbsp;</div>
-
+      <Grid item xs={12}>
       <Typography variant="h6" component="p">
         {person.biography}    
       </Typography>
+      </Grid>
       <div>&nbsp;</div>
-    
-      <ImageList sx={{  height: 450 }} cols={3} >
+      
+      <Grid item xs={8}>
+      <div>&nbsp;</div>
+      <ImageList sx={{  height: '450' }} cols={3} >
              
                 {images.map((image) => (
                     <ImageListItem key={image.file_path} cols={1}>
@@ -81,6 +84,7 @@ console.log(person.id)
                     </ImageListItem>
                 ))}
             </ImageList>
+            </Grid>
           </Paper>
 
           </div>

@@ -7,6 +7,7 @@ import Spinner from '../components/spinner';
 import RemoveFromFavorites from "../components/cardIcons/removeFromFavorites";
 
 
+
 const FavoriteMoviesPage = () => {
   const {favorites: movieIds } = useContext(MoviesContext);
 
@@ -41,6 +42,7 @@ const FavoriteMoviesPage = () => {
         return (
           <>
             <RemoveFromFavorites movie={movie} />
+           
             
           </>
         );

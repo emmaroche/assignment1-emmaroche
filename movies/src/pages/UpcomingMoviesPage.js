@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 
+
 const UpcomingMoviesPage = (props) => {
   const {  data, error, isLoading, isError }  = useQuery('upcoming', getUpcomingMovie)
 
@@ -28,6 +29,7 @@ const UpcomingMoviesPage = (props) => {
       movies={movies}
       action={(movie) => {
         return <AddToFavoritesIcon movie={movie} />
+   
       }}
     />
   );

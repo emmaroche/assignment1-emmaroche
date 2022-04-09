@@ -79,11 +79,11 @@ I researched a bit more into the use of the imageList API via [MUI](https://mui.
 
 ### Pagination
 
-I wanted to add pagination to my app, to help with this I found a few websites and youtube videos that I followed instructions from and put them together to create successful pagination that you can seen all the movie list views. The most significant website and video that helped me are linked below.
+I wanted to add pagination to my app, to help with this I found a few websites and youtube videos that I followed instructions from and put them together to create successful pagination that you can see in all the movie list views. The most significant website and video that helped me are linked below.
 
-+I installed 'npm i react-paginate' which is a ReactJS component, I got this command from this website: (https://www.npmjs.com/package/react-paginate) 
++ I installed 'npm i react-paginate' which is a ReactJS component, I got this command from this website: (https://www.npmjs.com/package/react-paginate) 
 
-+I was advised to install the above ReactJS component from this youtube video: (https://youtu.be/HANSMtDy508) I followed most of this youtube tutorial and made the relevant changes to get it to work within in this app. 
++ I was advised to install the above ReactJS component from this youtube video: (https://youtu.be/HANSMtDy508) I followed most of this youtube tutorial and made the relevant changes to get it to work within in this app. 
 
 
 

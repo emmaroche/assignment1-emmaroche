@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../headerMovieList";
 import FilterCard from "../filterMoviesCard";
+import FilterMovieCard2 from "../filtersMovieCard2";
 import MovieList from "../movieList";
 import Grid from "@mui/material/Grid";
 
@@ -29,11 +30,11 @@ function MovieListPageTemplate({ movies, title, action, genres }) {
    
   };
 
-  // const handleGenreChange = (type, value) => {
-  //   if (type === "name") setNameFilter(value);
-  //   else setGenreFilter(value);
+  const handleGenreChange = (type, value) => {
+    if (type === "name") setNameFilter(value);
+    else setGenreFilter(value);
    
-  // };
+  };
 
 
   return (
@@ -44,12 +45,21 @@ function MovieListPageTemplate({ movies, title, action, genres }) {
       <Grid item container spacing={5}>
         <Grid key="find" item xs={12} sm={6} md={6} lg={4} xl={3} >
           <FilterCard
-            onUserInput={handleChange}
-           
+             onUserInput={handleGenreChange}
             titleFilter={nameFilter}
             genreFilter={genreFilter}     
             ratingFilter={ratingFilter} 
           />
+<div>&nbsp;</div>
+<FilterMovieCard2
+           
+            onUserInput={handleChange}
+            titleFilter={nameFilter}
+            genreFilter={genreFilter}     
+            ratingFilter={ratingFilter} 
+           
+          />
+
         </Grid>
         <MovieList action={action} movies={displayedMovies}></MovieList>
       </Grid>

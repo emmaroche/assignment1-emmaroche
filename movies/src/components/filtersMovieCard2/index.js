@@ -10,7 +10,7 @@ import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import img from '../../images/cam.png'
+import img from '../../images/star.png'
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 
@@ -23,7 +23,7 @@ const formControl =
   };
 
   
-  export default function FilterMoviesCard(props) {
+  export default function FilterMovieCard2(props) {
     const { data, error, isLoading, isError } = useQuery("genres", getGenres, );
 
   
@@ -71,42 +71,13 @@ const formControl =
       variant="outlined">
       <CardContent>
 
-        <Typography variant="h5" component="h1">
+      <Typography variant="h5" component="h1">
           <SearchIcon fontSize="large" />
-          {" "} Filter movies
+          {" "} Filter ratings
         </Typography>
 
-      <TextField
-      sx={{...formControl}}
-      id="filled-search"
-      label="Search field"
-      type="search"
-      variant="filled"
-      value={props.titleFilter}
-      onChange={handleTextChange}
-    />
-        <FormControl sx={{...formControl}}>
-          <InputLabel id="genre-label">Genre</InputLabel>
-          <Select
-    labelId="genre-label"
-    id="genre-select"
-    defaultValue=""
-    value={props.genreFilter}
-    onChange={handleGenreChange}
-   
-  >
-            {genres.map((genre) => {
-              return (
-                <MenuItem key={genre.id} value={genre.id}>
-                  {genre.name}
-                </MenuItem>
-              );
-            })}
-          </Select>
-        </FormControl>
-
-        
-      {/* <TextField 
+    
+      <TextField 
       sx={{...formControl}}
       id="filled-number"
       label="Ratings"
@@ -116,12 +87,11 @@ const formControl =
       value={props.ratingFilter}
       onChange={handleTopChange}
       
-    /> */}
-     <div>&nbsp;</div>
-
-
-     <CardMedia
-        sx={{ height: 200 }}
+    />
+      
+      <div>&nbsp;</div>
+        <CardMedia
+        sx={{ height: 150 }}
         image={img}
         title="Filter"
         

@@ -32,7 +32,7 @@ Name: Emma Roche (20088680)
 
 + I made the movie cards wider so now 3/4 movie cards are shown in a row instead of 5 to make it easier to read the mvoue names and see the movie pictures.
 
-+ I added a 3 page pagination to the movie list, each page shows max 7 movie cards.
++ I added pagination to the movie list pages, each page shows max 7 movie cards.
 
 ## Setup requirements.
 

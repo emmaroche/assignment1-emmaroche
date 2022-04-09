@@ -170,53 +170,6 @@ export const getNowPlayingMovies = () => {
   });
 };
 
-
-// export const getTopRatedMovie = async () => {
-//   return fetch(
-//     "https://api.themoviedb.org/3/movie/top_rated?api_key=" +
-//     process.env.REACT_APP_TMDB_KEY +
-//       "&language=en-US"
-//   ).then( (response) => {
-//     if (!response.ok) {
-//       throw new Error(response.json().message);
-//     }
-//     return response.json();
-//   })
-//   .catch((error) => {
-//     throw error
-//  });
-// };
-
-// export const getTrendingMovie = async () => {
-//   return fetch(
-//     "https://api.themoviedb.org/3/trending/all/day?api_key=" +
-//     process.env.REACT_APP_TMDB_KEY +
-//       "&language=en-US"
-//   ).then( (response) => {
-//     if (!response.ok) {
-//       throw new Error(response.json().message);
-//     }
-//     return response.json();
-//   })
-//   .catch((error) => {
-//     throw error
-//  });
-// };
-
-// export const getLatestMovie = () => {
-//   return fetch(
-//     `https://api.themoviedb.org/3/movie/latest?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
-//   ).then((response) => {
-//     if (!response.ok) {
-//       throw new Error(response.json().message);
-//     }
-//     return response.json();
-//   })
-//   .catch((error) => {
-//      throw error
-//   });
-// };
-
 // export const getPopularMovie = () => {
 //   return fetch(
 //     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
@@ -231,16 +184,36 @@ export const getNowPlayingMovies = () => {
 //   });
 // };
 
-// export const getSearch = () => {
-//   return fetch(
-//     `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false`
-//   ).then((response) => {
-//     if (!response.ok) {
-//       throw new Error(response.json().message);
-//     }
-//     return response.json();
-//   })
-//   .catch((error) => {
-//      throw error
-//   });
-// };
+
+// export const getPopularMovie = () => {
+// //   return fetch(
+// //     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+// //   ).then((response) => {
+// //     if (!response.ok) {
+// //       throw new Error(response.json().message);
+// //     }
+// //     return response.json();
+// //   })
+// //   .catch((error) => {
+// //      throw error
+// //   });
+// // };
+
+
+
+
+export const getTopMovie = () => {
+  return fetch(
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+  ).then((response) => {
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
+  })
+  .catch((error) => {
+     throw error
+  });
+};
+
+

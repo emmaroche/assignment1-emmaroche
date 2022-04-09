@@ -25,7 +25,7 @@ function MovieListPageTemplate({ movies, title, action, genres }) {
 
   const handleChange = (type, value) => {
     if (type === "name") setNameFilter(value);
-    else setRatingFilter(value);
+    else setRatingFilter(value); 
    
   };
 
@@ -45,6 +45,7 @@ function MovieListPageTemplate({ movies, title, action, genres }) {
         <Grid key="find" item xs={12} sm={6} md={6} lg={4} xl={3} >
           <FilterCard
             onUserInput={handleChange}
+           
             titleFilter={nameFilter}
             genreFilter={genreFilter}     
             ratingFilter={ratingFilter} 

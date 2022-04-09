@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import SimilarPage from "./pages/similiarMoviesPage";
+import RatedMoviesPage from "./pages/TopRatedMoviePage";
 import PersonPage from "./pages/moviePersonPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
 import UpcomingMoviesPage from "./pages/UpcomingMoviesPage";
@@ -34,7 +35,8 @@ const App = () => {
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
         <Route path="/movies/favorites" element={<FavoriteMoviesPage />} />
         <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
-        <Route path="/movie/now_playing" element={<NowPlayingMoviesPage />} />
+        <Route path="/movie/now_playing" element={<NowPlayingMoviesPage />} /> 
+        <Route path="/movie/top_rated" element={<RatedMoviesPage />} />
         <Route path="/movies/:id" element={<MoviePage />} />
         <Route path="/similar/:id" element={<SimilarPage />} />
         <Route path="/person/:id" element={<PersonPage />} />

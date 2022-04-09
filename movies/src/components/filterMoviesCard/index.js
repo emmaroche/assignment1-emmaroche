@@ -25,7 +25,7 @@ const formControl =
   
   export default function FilterMoviesCard(props) {
     const { data, error, isLoading, isError } = useQuery("genres", getGenres, );
-    
+
   
     if (isLoading) {
       return <Spinner />;
@@ -57,7 +57,12 @@ const formControl =
       handleChange(e, "vote_average", e.target.value);
     };
 
+
+
   return (
+
+
+
     <Card 
       sx={{
         maxWidth: 1000,
@@ -88,6 +93,7 @@ const formControl =
     defaultValue=""
     value={props.genreFilter}
     onChange={handleGenreChange}
+   
   >
             {genres.map((genre) => {
               return (
@@ -99,7 +105,7 @@ const formControl =
           </Select>
         </FormControl>
 
-
+        
       <TextField 
       sx={{...formControl}}
       id="filled-number"

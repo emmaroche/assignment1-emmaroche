@@ -48,7 +48,7 @@ URL: `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_A
 URL: `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
 
 + People details  - path: /person/:id
-URL: `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
++ URL: `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
 
 + People images - path: /person/{person_id}/images 
 URL: `https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`

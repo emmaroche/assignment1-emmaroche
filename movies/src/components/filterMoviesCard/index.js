@@ -50,9 +50,9 @@ const formControl =
       handleChange(e, "genre", e.target.value);
     };
 
-  const handleTopChange = (e, props) => {
-      handleChange(e, "vote_average", e.target.value);
-    };
+  // const handleTopChange = (e, props) => {
+  //     handleChange(e, "vote_average", e.target.value);
+  //   };
 
   return (
 

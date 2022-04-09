@@ -5,6 +5,7 @@ import FilterRatingCard from "../filtersRatingCard";
 import MovieList from "../movieList";
 import Grid from "@mui/material/Grid";
 
+
 function MovieListPageTemplate({ movies, title, action, genres }) {
   const [nameFilter, setNameFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
@@ -61,6 +62,7 @@ function MovieListPageTemplate({ movies, title, action, genres }) {
 
         </Grid>
         <MovieList action={action} movies={displayedMovies}></MovieList>
+  
       </Grid>
     </Grid>
   );
